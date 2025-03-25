@@ -18,50 +18,34 @@
         }
         
         .hero {
-    height: 100vh;
-    /* First set the gradient background */
-    background: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
-    /* Then add the image on top with proper sizing */
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-align: center;
-}
-
-/* Create a container for the image */
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url("Adobe\\ Express\\ -\\ file.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 0.8; /* Adjust this value to control image transparency */
-    z-index: 0;
-}
-
-/* Adjust the overlay to be between the image and content */
-.hero::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.3); /* Reduced opacity */
-    z-index: 1;
-}
-
+            height: 100vh;
+            background: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-image {
+            max-width: 60%; /* Control image width here */
+            max-height: 60vh; /* Control image height here */
+            object-fit: contain;
+            margin-bottom: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
         
         .hero-content {
             position: relative;
             z-index: 2;
+            padding: 1rem;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            max-width: 80%;
         }
         
         .hero h1 {
@@ -218,6 +202,10 @@
                 font-size: 1.2rem;
             }
             
+            .hero-image {
+                max-width: 80%;
+            }
+            
             .pricing {
                 flex-direction: column;
             }
@@ -226,6 +214,7 @@
 </head>
 <body>
     <section class="hero">
+        <img src="Adobe Express - file.png" alt="Kaspi Курсы" class="hero-image">
         <div class="hero-content">
             <h1>Kaspi Курсы</h1>
             <p>Kaspi арқылы табыс табуды үйреніңіз</p>
