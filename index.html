@@ -18,48 +18,45 @@
         }
         
         .hero {
-    background: linear-gradient(to bottom, #e0f7fa, #ffffff), url('Adobe Express - file.png');
+    background-image: url('Adobe Express - file.png');
     background-size: cover;
     background-position: center;
-    color: #333; /* Darker text color for better contrast */
+    color: #fff; /* Ensure text is visible over the image */
     text-align: center;
     padding: 50px 0; /* Adjust padding as needed */
     height: 100vh; /* Make the hero section fill the entire viewport height */
     display: flex;
-    align-items: flex-start; /* Align text at the top */
+    align-items: center;
     justify-content: center;
-    flex-direction: column; /* Ensure text is stacked vertically */
-    position: relative;
-    z-index: 1;
 }
 
 .hero-content {
     position: relative;
-    z-index: 2; /* Ensure text is above the background image */
-    margin-top: 20px; /* Add some margin from the top */
+    z-index: 1; /* Ensure text is above the background image */
 }
 
-.hero h1 {
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+.hero-image {
+    display: none; /* Hide the img tag since the image is now a background */
 }
-
-.hero p {
-    font-size: 1.5rem;
-    max-width: 800px;
-    margin: 0 auto;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-    position: relative;
-    z-index: 0;
-    margin-top: -50px; /* Adjust this value to create a separation */
-}
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
         
         .modules {
             margin: 3rem 0;
