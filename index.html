@@ -20,7 +20,8 @@
         .hero {
             height: 100vh;
             background-image: url("Adobe\ Express\ -\ file.png");
-            background-size: cover;
+            background-size: contain; /* Changed from 'cover' to 'contain' */
+            background-repeat: no-repeat;
             background-position: center;
             display: flex;
             align-items: center;
@@ -28,7 +29,10 @@
             color: white;
             text-align: center;
             position: relative;
-        }
+    /* Adding a gradient background */
+            background-color: #4158D0;
+            background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+}
         
         .hero::after {
             content: '';
