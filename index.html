@@ -18,32 +18,46 @@
         }
         
         .hero {
-            height: 100vh;
-            background-image: url("Adobe\ Express\ -\ file.png");
-            background-size: contain; /* Changed from 'cover' to 'contain' */
-            background-repeat: no-repeat;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-align: center;
-            position: relative;
-    /* Adding a gradient background */
-            background-color: #4158D0;
-            background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    height: 100vh;
+    /* First set the gradient background */
+    background: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    /* Then add the image on top with proper sizing */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
 }
-        
-        .hero::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 1;
-        }
+
+/* Create a container for the image */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("Adobe\\ Express\\ -\\ file.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.8; /* Adjust this value to control image transparency */
+    z-index: 0;
+}
+
+/* Adjust the overlay to be between the image and content */
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Reduced opacity */
+    z-index: 1;
+}
+
         
         .hero-content {
             position: relative;
