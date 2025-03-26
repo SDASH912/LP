@@ -1,376 +1,425 @@
 <!DOCTYPE html>
 <html lang="kk">
+
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Kaspi Курсы</title>
-   <style>
-       * {
-           margin: 0;
-           padding: 0;
-           box-sizing: border-box;
-           font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-       }
-       
-       body {
-           color: #333;
-           line-height: 1.6;
-       }
-       
-       .hero {
-           height: 100vh;
-           background-image: url("Adobe\ Express\ -\ file.png");
-           background-size: contain; /* Changed from 'cover' to 'contain' */
-           background-repeat: no-repeat;
-           background-position: center;
-           display: flex;
-           align-items: center;
-           justify-content: center;
-           color: white;
-           text-align: center;
-           position: relative;
-   /* Adding a gradient background */
-           background-color: #4158D0;
-           background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
-}
-       
-       .hero::after {
-           content: '';
-           position: absolute;
-           top: 0;
-           left: 0;
-           width: 100%;
-           height: 100%;
-           background: rgba(0, 0, 0, 0.5);
-           z-index: 1;
-       }
-       
-       .hero-content {
-           position: relative;
-           z-index: 2;
-       }
-       
-       .hero h1 {
-           font-size: 3.5rem;
-           margin-bottom: 1rem;
-           text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-       }
-       
-       .hero p {
-           font-size: 1.5rem;
-           max-width: 800px;
-           margin: 0 auto;
-           text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-       }
-       
-       .container {
-           max-width: 1200px;
-           margin: 0 auto;
-           padding: 2rem;
-       }
-       
-       .modules {
-           margin: 3rem 0;
-       }
-       
-       .module {
-           margin-bottom: 2.5rem;
-           padding: 2rem;
-           border-radius: 10px;
-           background-color: #f9f9f9;
-           box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-       }
-       
-       .module h2 {
-           color: #e91e63;
-           margin-bottom: 1rem;
-           font-size: 1.8rem;
-       }
-       
-       .module ul {
-           margin-left: 2rem;
-           margin-bottom: 1.5rem;
-       }
-       
-       .module li {
-           margin-bottom: 0.5rem;
-       }
-       
-       .results {
-           background-color: #f5f5f5;
-           padding: 1.5rem;
-           border-radius: 8px;
-           margin-top: 1.5rem;
-       }
-       
-       .results h3 {
-           color: #2196f3;
-           margin-bottom: 1rem;
-       }
-       
-       .pricing {
-           display: flex;
-           justify-content: space-between;
-           flex-wrap: wrap;
-           gap: 2rem;
-           margin: 4rem 0;
-       }
-       
-       .price-card {
-           flex: 1;
-           min-width: 300px;
-           padding: 2rem;
-           border-radius: 10px;
-           box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-           text-align: center;
-           transition: transform 0.3s ease;
-       }
-       
-       .price-card:hover {
-           transform: translateY(-10px);
-       }
-       
-       .standard {
-           background-color: #f5f5f5;
-       }
-       
-       .premium {
-           background-color: #e3f2fd;
-       }
-       
-       .vip {
-           background-color: #fff8e1;
-       }
-       
-       .price-card h3 {
-           font-size: 1.8rem;
-           margin-bottom: 1.5rem;
-           color: #333;
-       }
-       
-       .price-card ul {
-           text-align: left;
-           margin-bottom: 2rem;
-           list-style-type: none;
-       }
-       
-       .price-card li {
-           margin-bottom: 0.8rem;
-           position: relative;
-           padding-left: 1.5rem;
-       }
-       
-       .price-card li::before {
-           content: "•";
-           position: absolute;
-           left: 0;
-           color: #e91e63;
-       }
-       
-       .price {
-           font-size: 2rem;
-           font-weight: bold;
-           color: #e91e63;
-           margin-top: 1.5rem;
-       }
-       
-       .bonus {
-           background-color: #e8f5e9;
-           padding: 2rem;
-           border-radius: 10px;
-           margin: 3rem 0;
-           text-align: center;
-       }
-       
-       .bonus h2 {
-           color: #4caf50;
-           margin-bottom: 1rem;
-       }
-       
-       footer {
-           background-color: #333;
-           color: white;
-           text-align: center;
-           padding: 2rem;
-           margin-top: 3rem;
-       }
-       
-       @media (max-width: 768px) {
-           .hero h1 {
-               font-size: 2.5rem;
-           }
-           
-           .hero p {
-               font-size: 1.2rem;
-           }
-           
-           .pricing {
-               flex-direction: column;
-           }
-       }
-   </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaspi Курсы</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .hero {
+            height: 100vh;
+            background-image: url("Adobe\ Express\ -\ file.png");
+            background-size: contain;
+            /* Changed from 'cover' to 'contain' */
+            background-repeat: no-repeat;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            position: relative;
+            /* Adding a gradient background */
+            background-color: #4158D0;
+            background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .modules {
+            margin: 3rem 0;
+        }
+
+        .module {
+            margin-bottom: 2.5rem;
+            padding: 2rem;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .module h2 {
+            color: #e91e63;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .module ul {
+            margin-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .module li {
+            margin-bottom: 0.5rem;
+        }
+
+        .results {
+            background-color: #f5f5f5;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 1.5rem;
+        }
+
+        .results h3 {
+            color: #2196f3;
+            margin-bottom: 1rem;
+        }
+
+        .pricing {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+
+        .price-card {
+            flex: 1;
+            min-width: 300px;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .price-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .standard {
+            background-color: #f5f5f5;
+        }
+
+        .premium {
+            background-color: #e3f2fd;
+        }
+
+        .vip {
+            background-color: #fff8e1;
+        }
+
+        .price-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+
+        .price-card ul {
+            text-align: left;
+            margin-bottom: 2rem;
+            list-style-type: none;
+        }
+
+        .price-card li {
+            margin-bottom: 0.8rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .price-card li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #e91e63;
+        }
+
+        .price {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #e91e63;
+            margin-top: 1.5rem;
+        }
+
+        .bonus {
+            background-color: #e8f5e9;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .bonus h2 {
+            color: #4caf50;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            .pricing {
+                flex-direction: column;
+            }
+
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 20px 0;
+                position: relative;
+                /* Ensure the hero section is positioned relative to allow absolute positioning of the image */
+            }
+
+            .hero-image {
+                max-width: 150%;
+                position: absolute;
+                /* Position the image absolutely within the hero section */
+                right: 10%;
+                /* Adjust the right position to move the image slightly to the right */
+                bottom: -10%;
+                /* Adjust the bottom position to move the image slightly down */
+                transform: translate(10%, 10%);
+                /* Fine-tune the position with transform */
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero-content {
+                margin-top: 60px;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .module h2 {
+                font-size: 1.7rem;
+            }
+
+            .price-card h3 {
+                font-size: 1.7rem;
+            }
+
+            .price {
+                font-size: 1.7rem;
+            }
+        }
+    </style>
 </head>
+
 <body>
-   <section class="hero">
-       <div class="hero-content">
-           <h1>Kaspi Курсы</h1>
-           <p>Kaspi арқылы табыс табуды үйреніңіз</p>
-       </div>
-   </section>
-   
-   <div class="container">
-       <section class="modules">
-           <div class="module">
-               <h2>1 Модуль</h2>
-               <ul>
-                   <li>Танысу</li>
-                   <li>Жауапкершілік</li>
-                   <li>Арман Мақсат жазу</li>
-                   <li>ИП ашу</li>
-                   <li>Kaspi pay регистрация жасау</li>
-                   <li>Kaspi магазинге одобрение алу жолдары</li>
-                   <li>Kaspi касса қосу</li>
-                   <li>ИП налогтары от и до</li>
-               </ul>
-               
-               <div class="results">
-                   <h3>Нәтижесінде:</h3>
-                   <ul>
-                       <li>Өз өміріңізге жауапкершілік алып, осы курстан нәтижеге жетесіз.</li>
-                       <li>Нақты мақсатыңызды айқындап, оған жету жолын көресіз.</li>
-                       <li>ИП налогтарын без бухгалтер ай сайын өзіңіз тапсырасыз.</li>
-                   </ul>
-               </div>
-           </div>
-           
-           <div class="module">
-               <h2>2 Модуль</h2>
-               <ul>
-                   <li>Ашық категория және жабық категория</li>
-                   <li>Анализ жасау менің методыммен ручной және бот</li>
-                   <li>Маржа есептеу + таблица</li>
-                   <li>Закуп жасау</li>
-                   <li>Алипей регистрация + (юань толтыратын кісінің контакт номері)</li>
-                   <li>1688 регистрация</li>
-                   <li>Пиндуодо</li>
-               </ul>
-               
-               <div class="results">
-                   <h3>Нәтижесінде:</h3>
-                   <ul>
-                       <li>Анализ жасау арқасында маржанальный товар табуды үйренесіз.</li>
-                       <li>Қытайдан арзан бағаға алып Kaspi де арзан сата аласыз.</li>
-                   </ul>
-               </div>
-           </div>
-           
-           <div class="module">
-               <h2>3 Модуль</h2>
-               <ul>
-                   <li>Кaspi магазин ашылды</li>
-                   <li>Кабинет настройкасын жасау</li>
-                   <li>Магазин аты, Логотип</li>
-                   <li>Доставка түрлерін қосып заказ санын арттыру</li>
-                   <li>Товар салудың 2 түрі</li>
-                   <li>Демпинг ручной және бот</li>
-                   <li>Упоковка ережелері/росходтары</li>
-               </ul>
-               
-               <div class="results">
-                   <h3>Нәтижесінде:</h3>
-                   <ul>
-                       <li>Упоковканы тиімді қолданып үйренесіз</li>
-                       <li>Доставканың барлық түрін қоса аласыз</li>
-                       <li>Настройканың арқасында қалаған уақтынызда дұрыс демалу мүмкіндігі</li>
-                   </ul>
-               </div>
-           </div>
-           
-           <div class="module">
-               <h2>4 Модуль</h2>
-               <ul>
-                   <li>Предзаказ Таблицамен</li>
-                   <li>Предзаказ ботпен (промокодпен 14 күн тегін)</li>
-                   <li>Маркетинг аз расходпен</li>
-                   <li>Быстрые продажи</li>
-               </ul>
-               
-               <div class="results">
-                   <h3>Нәтижесінде:</h3>
-                   <ul>
-                       <li>Товарыңыз қолынызда болмасада, заказ алып жұмыс жасайсыз.</li>
-                       <li>Мына құралдарды қолдана отырып, продажаны 2 есе көбейтесіз.</li>
-                   </ul>
-               </div>
-           </div>
-           
-           <div class="module">
-               <h2>5 Модуль</h2>
-               <ul>
-                   <li>Жасауға болмайтын қателіктер</li>
-                   <li>Возвраттар, отмена</li>
-                   <li>Компенсация алу</li>
-               </ul>
-               
-               <div class="results">
-                   <h3>Нәтижесінде:</h3>
-                   <ul>
-                       <li>Блокқа кетпей ұзақ мерзімде жұмыс жасайсыз.</li>
-                   </ul>
-               </div>
-           </div>
-           
-           <div class="bonus">
-               <h2>Бонус:</h2>
-               <p>Поставщиктер каналы</p>
-               <p>100 Топ Ниша</p>
-           </div>
-       </section>
-       
-       <section class="pricing">
-           <div class="price-card standard">
-               <h3>Стандарт Kaspi онлайн</h3>
-               <ul>
-                   <li>I бастап V модульге доступ</li>
-                   <li>Онлайн форматта сабақ платформада болады</li>
-                   <li>Сабаққа доступ 6 ай</li>
-                   <li>Кері байланыс 2 ай</li>
-               </ul>
-               <div class="price">40.000 тг</div>
-           </div>
-           
-           <div class="price-card premium">
-               <h3>Премиум Kaspi</h3>
-               <ul>
-                   <li>I бастап V модульге доступ</li>
-                   <li>Онлайн және офлайн</li>
-                   <li>Менімен кездесу немесе зум созвон 2 рет</li>
-                   <li>Сабаққа доступ 6 ай</li>
-                   <li>Кері байланыс 2 ай</li>
-                   <li>+ 5 өтімді товар тауып беремін</li>
-               </ul>
-               <div class="price">80.000 тг</div>
-           </div>
-           
-           <div class="price-card vip">
-               <h3>Vip Kaspi</h3>
-               <ul>
-                   <li>I бастап V модульге доступ</li>
-                   <li>Онлайн және офлайн</li>
-                   <li>Менімен кездесу немесе зум созвон 4 рет</li>
-                   <li>Сабаққа доступ 6 ай</li>
-                   <li>Кері байланыс 2 ай</li>
-                   <li>+ 10 өтімді товар тауып беремін</li>
-                   <li>Бірге закуп жасап, бірге сатылымға шығарып</li>
-                   <li>2 айда 300.000 теңгеден жоғары табыс</li>
-               </ul>
-               <div class="price">150.000 тг</div>
-           </div>
-       </section>
-   </div>
-   
-   <footer>
-       <p>&copy; 2025 Kaspi Курсы. Барлық құқықтар қорғалған.</p>
-   </footer>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Kaspi Курсы</h1>
+            <p>Kaspi арқылы табыс табуды үйреніңіз</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <section class="modules">
+            <div class="module">
+                <h2>1 Модуль</h2>
+                <ul>
+                    <li>Танысу</li>
+                    <li>Жауапкершілік</li>
+                    <li>Арман Мақсат жазу</li>
+                    <li>ИП ашу</li>
+                    <li>Kaspi pay регистрация жасау</li>
+                    <li>Kaspi магазинге одобрение алу жолдары</li>
+                    <li>Kaspi касса қосу</li>
+                    <li>ИП налогтары от и до</li>
+                </ul>
+
+                <div class="results">
+                    <h3>Нәтижесінде:</h3>
+                    <ul>
+                        <li>Өз өміріңізге жауапкершілік алып, осы курстан нәтижеге жетесіз.</li>
+                        <li>Нақты мақсатыңызды айқындап, оған жету жолын көресіз.</li>
+                        <li>ИП налогтарын без бухгалтер ай сайын өзіңіз тапсырасыз.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="module">
+                <h2>2 Модуль</h2>
+                <ul>
+                    <li>Ашық категория және жабық категория</li>
+                    <li>Анализ жасау менің методыммен ручной және бот</li>
+                    <li>Маржа есептеу + таблица</li>
+                    <li>Закуп жасау</li>
+                    <li>Алипей регистрация + (юань толтыратын кісінің контакт номері)</li>
+                    <li>1688 регистрация</li>
+                    <li>Пиндуодо</li>
+                </ul>
+
+                <div class="results">
+                    <h3>Нәтижесінде:</h3>
+                    <ul>
+                        <li>Анализ жасау арқасында маржанальный товар табуды үйренесіз.</li>
+                        <li>Қытайдан арзан бағаға алып Kaspi де арзан сата аласыз.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="module">
+                <h2>3 Модуль</h2>
+                <ul>
+                    <li>Кaspi магазин ашылды</li>
+                    <li>Кабинет настройкасын жасау</li>
+                    <li>Магазин аты, Логотип</li>
+                    <li>Доставка түрлерін қосып заказ санын арттыру</li>
+                    <li>Товар салудың 2 түрі</li>
+                    <li>Демпинг ручной және бот</li>
+                    <li>Упоковка ережелері/росходтары</li>
+                </ul>
+
+                <div class="results">
+                    <h3>Нәтижесінде:</h3>
+                    <ul>
+                        <li>Упоковканы тиімді қолданып үйренесіз</li>
+                        <li>Доставканың барлық түрін қоса аласыз</li>
+                        <li>Настройканың арқасында қалаған уақтынызда дұрыс демалу мүмкіндігі</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="module">
+                <h2>4 Модуль</h2>
+                <ul>
+                    <li>Предзаказ Таблицамен</li>
+                    <li>Предзаказ ботпен (промокодпен 14 күн тегін)</li>
+                    <li>Маркетинг аз расходпен</li>
+                    <li>Быстрые продажи</li>
+                </ul>
+
+                <div class="results">
+                    <h3>Нәтижесінде:</h3>
+                    <ul>
+                        <li>Товарыңыз қолынызда болмасада, заказ алып жұмыс жасайсыз.</li>
+                        <li>Мына құралдарды қолдана отырып, продажаны 2 есе көбейтесіз.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="module">
+                <h2>5 Модуль</h2>
+                <ul>
+                    <li>Жасауға болмайтын қателіктер</li>
+                    <li>Возвраттар, отмена</li>
+                    <li>Компенсация алу</li>
+                </ul>
+
+                <div class="results">
+                    <h3>Нәтижесінде:</h3>
+                    <ul>
+                        <li>Блокқа кетпей ұзақ мерзімде жұмыс жасайсыз.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bonus">
+                <h2>Бонус:</h2>
+                <p>Поставщиктер каналы</p>
+                <p>100 Топ Ниша</p>
+            </div>
+        </section>
+
+        <section class="pricing">
+            <div class="price-card standard">
+                <h3>Стандарт Kaspi онлайн</h3>
+                <ul>
+                    <li>I бастап V модульге доступ</li>
+                    <li>Онлайн форматта сабақ платформада болады</li>
+                    <li>Сабаққа доступ 6 ай</li>
+                    <li>Кері байланыс 2 ай</li>
+                </ul>
+                <div class="price">40.000 тг</div>
+            </div>
+
+            <div class="price-card premium">
+                <h3>Премиум Kaspi</h3>
+                <ul>
+                    <li>I бастап V модульге доступ</li>
+                    <li>Онлайн және офлайн</li>
+                    <li>Менімен кездесу немесе зум созвон 2 рет</li>
+                    <li>Сабаққа доступ 6 ай</li>
+                    <li>Кері байланыс 2 ай</li>
+                    <li>+ 5 өтімді товар тауып беремін</li>
+                </ul>
+                <div class="price">80.000 тг</div>
+            </div>
+
+            <div class="price-card vip">
+                <h3>Vip Kaspi</h3>
+                <ul>
+                    <li>I бастап V модульге доступ</li>
+                    <li>Онлайн және офлайн</li>
+                    <li>Менімен кездесу немесе зум созвон 4 рет</li>
+                    <li>Сабаққа доступ 6 ай</li>
+                    <li>Кері байланыс 2 ай</li>
+                    <li>+ 10 өтімді товар тауып беремін</li>
+                    <li>Бірге закуп жасап, бірге сатылымға шығарып</li>
+                    <li>2 айда 300.000 теңгеден жоғары табыс</li>
+                </ul>
+                <div class="price">150.000 тг</div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Kaspi Курсы. Барлық құқықтар қорғалған.</p>
+    </footer>
 </body>
+
 </html>
