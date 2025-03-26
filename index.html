@@ -1,257 +1,273 @@
 <!DOCTYPE html>
 <html lang="kk">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kaspi Курсы</title>
     <style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-    
-    body {
-        color: #333;
-        line-height: 1.6;
-    }
-    
-    .hero {
-        background-image: url("Remove\ background\ project.png");
-        background-size: auto;
-        background-position: center;
-        color: #fff;
-        text-align: center;
-        padding: 50px 0;
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 720px;
-        width: 1200px;
-    }
-
-    .hero-content {
-        position: relative;
-        z-index: 1;
-        margin: 30px;
-        margin-top: 50px;
-    }
-
-    .hero-image {
-        display: none;
-    }
-    
-    .hero h1 {
-        font-size: 3.5rem;
-        margin-bottom: 1rem;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    }
-    
-    .hero p {
-        font-size: 1.5rem;
-        max-width: 800px;
-        margin: 0 auto;
-        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-    }
-    
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 2rem;
-    }
-    
-    .modules {
-        margin: 3rem 0;
-    }
-    
-    .module {
-        margin-bottom: 2.5rem;
-        padding: 2rem;
-        border-radius: 10px;
-        background-color: #f9f9f9;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-    
-    .module h2 {
-        color: #e91e63;
-        margin-bottom: 1rem;
-        font-size: 1.8rem;
-    }
-    
-    .module ul {
-        margin-left: 2rem;
-        margin-bottom: 1.5rem;
-    }
-    
-    .module li {
-        margin-bottom: 0.5rem;
-    }
-    
-    .results {
-        background-color: #f5f5f5;
-        padding: 1.5rem;
-        border-radius: 8px;
-        margin-top: 1.5rem;
-    }
-    
-    .results h3 {
-        color: #2196f3;
-        margin-bottom: 1rem;
-    }
-    
-    .pricing {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        gap: 2rem;
-        margin: 4rem 0;
-    }
-    
-    .price-card {
-        flex: 1;
-        min-width: 300px;
-        padding: 2rem;
-        border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        transition: transform 0.3s ease;
-    }
-    
-    .price-card:hover {
-        transform: translateY(-10px);
-    }
-    
-    .standard {
-        background-color: #f5f5f5;
-    }
-    
-    .premium {
-        background-color: #e3f2fd;
-    }
-    
-    .vip {
-        background-color: #fff8e1;
-    }
-    
-    .price-card h3 {
-        font-size: 1.8rem;
-        margin-bottom: 1.5rem;
-        color: #333;
-    }
-    
-    .price-card ul {
-        text-align: left;
-        margin-bottom: 2rem;
-        list-style-type: none;
-    }
-    
-    .price-card li {
-        margin-bottom: 0.8rem;
-        position: relative;
-        padding-left: 1.5rem;
-    }
-    
-    .price-card li::before {
-        content: "•";
-        position: absolute;
-        left: 0;
-        color: #e91e63;
-    }
-    
-    .price {
-        font-size: 2rem;
-        font-weight: bold;
-        color: #e91e63;
-        margin-top: 1.5rem;
-    }
-    
-    .bonus {
-        background-color: #e8f5e9;
-        padding: 2rem;
-        border-radius: 10px;
-        margin: 3rem 0;
-        text-align: center;
-    }
-    
-    .bonus h2 {
-        color: #4caf50;
-        margin-bottom: 1rem;
-    }
-    
-    footer {
-        background-color: #333;
-        color: white;
-        text-align: center;
-        padding: 2rem;
-        margin-top: 3rem;
-    }
-    
-    @media (max-width: 768px) {
-        .hero{
-            height: 1500px;
-            padding: 20px 0;
-            background-size: auto;
-            width: 300px;
-        }
-        .hero-image {
-            max-width: 80%;
-        }
-        .hero-content {
-            margin-top: 80px; /* Adjust for tablets and small screens */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
-        .hero h1 {
-            font-size: 3rem; /* Increased font size for better readability */
-        }
-        
-        .hero p {
-            font-size: 1.4rem; /* Increased font size for better readability */
-        }
-        
-        .pricing {
-            flex-direction: column;
+        body {
+            color: #333;
+            line-height: 1.6;
         }
 
-        .price-card {
-            margin-bottom: 2rem;
-        }
-    }
-
-    @media (max-width: 480px) {
         .hero {
-            height: 500px;
-            padding: 20px 0;
+            background-image: url("Remove\ background\ project.png");
+            background-size: auto;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            padding: 50px 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 720px;
+            width: 1200px;
         }
-        .hero-image {
-                max-width: 150%;
-            }
-        .hero h1 {
-            font-size: 2.5rem; /* Increased font size for better readability */
-        }
+
         .hero-content {
-            margin-top: 60px; /* Adjust for phones */
+            position: relative;
+            z-index: 1;
+            margin: 30px;
+            margin-top: 50px;
+        }
+
+        .hero-image {
+            display: none;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
 
         .hero p {
-            font-size: 1.2rem; /* Increased font size for better readability */
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .modules {
+            margin: 3rem 0;
+        }
+
+        .module {
+            margin-bottom: 2.5rem;
+            padding: 2rem;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         .module h2 {
-            font-size: 1.7rem; /* Increased font size for better readability */
+            color: #e91e63;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .module ul {
+            margin-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .module li {
+            margin-bottom: 0.5rem;
+        }
+
+        .results {
+            background-color: #f5f5f5;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 1.5rem;
+        }
+
+        .results h3 {
+            color: #2196f3;
+            margin-bottom: 1rem;
+        }
+
+        .pricing {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+
+        .price-card {
+            flex: 1;
+            min-width: 300px;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .price-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .standard {
+            background-color: #f5f5f5;
+        }
+
+        .premium {
+            background-color: #e3f2fd;
+        }
+
+        .vip {
+            background-color: #fff8e1;
         }
 
         .price-card h3 {
-            font-size: 1.7rem; /* Increased font size for better readability */
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+
+        .price-card ul {
+            text-align: left;
+            margin-bottom: 2rem;
+            list-style-type: none;
+        }
+
+        .price-card li {
+            margin-bottom: 0.8rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .price-card li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #e91e63;
         }
 
         .price {
-            font-size: 1.7rem; /* Increased font size for better readability */
+            font-size: 2rem;
+            font-weight: bold;
+            color: #e91e63;
+            margin-top: 1.5rem;
         }
-    }
-</style>
+
+        .bonus {
+            background-color: #e8f5e9;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .bonus h2 {
+            color: #4caf50;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                height: 1500px;
+                padding: 20px 0;
+                background-size: auto;
+                width: 300px;
+            }
+
+            .hero-image {
+                max-width: 80%;
+            }
+
+            .hero-content {
+                margin-top: 80px;
+                /* Adjust for tablets and small screens */
+            }
+
+            .hero h1 {
+                font-size: 3rem;
+                /* Increased font size for better readability */
+            }
+
+            .hero p {
+                font-size: 1.4rem;
+                /* Increased font size for better readability */
+            }
+
+            .pricing {
+                flex-direction: column;
+            }
+
+            .price-card {
+                margin-bottom: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                height: 500px;
+                padding: 20px 0;
+            }
+
+            .hero-image {
+                max-width: 150%;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+                /* Increased font size for better readability */
+            }
+
+            .hero-content {
+                margin-top: 60px;
+                /* Adjust for phones */
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+                /* Increased font size for better readability */
+            }
+
+            .module h2 {
+                font-size: 1.7rem;
+                /* Increased font size for better readability */
+            }
+
+            .price-card h3 {
+                font-size: 1.7rem;
+                /* Increased font size for better readability */
+            }
+
+            .price {
+                font-size: 1.7rem;
+                /* Increased font size for better readability */
+            }
+        }
+    </style>
 </head>
+
 <body>
     <section class="hero">
         <div class="hero-content">
@@ -260,7 +276,7 @@
         </div>
         <img src="Remove background project.png" alt="Kaspi Курсы" class="hero-image">
     </section>
-    
+
     <div class="container">
         <section class="modules">
             <div class="module">
@@ -275,7 +291,7 @@
                     <li>Kaspi касса қосу</li>
                     <li>ИП налогтары от и до</li>
                 </ul>
-                
+
                 <div class="results">
                     <h3>Нәтижесінде:</h3>
                     <ul>
@@ -285,7 +301,7 @@
                     </ul>
                 </div>
             </div>
-            
+
             <div class="module">
                 <h2>2 Модуль</h2>
                 <ul>
@@ -297,7 +313,7 @@
                     <li>1688 регистрация</li>
                     <li>Пиндуодо</li>
                 </ul>
-                
+
                 <div class="results">
                     <h3>Нәтижесінде:</h3>
                     <ul>
@@ -306,7 +322,7 @@
                     </ul>
                 </div>
             </div>
-            
+
             <div class="module">
                 <h2>3 Модуль</h2>
                 <ul>
@@ -318,7 +334,7 @@
                     <li>Демпинг ручной және бот</li>
                     <li>Упоковка ережелері/росходтары</li>
                 </ul>
-                
+
                 <div class="results">
                     <h3>Нәтижесінде:</h3>
                     <ul>
@@ -328,7 +344,7 @@
                     </ul>
                 </div>
             </div>
-            
+
             <div class="module">
                 <h2>4 Модуль</h2>
                 <ul>
@@ -337,7 +353,7 @@
                     <li>Маркетинг аз расходпен</li>
                     <li>Быстрые продажи</li>
                 </ul>
-                
+
                 <div class="results">
                     <h3>Нәтижесінде:</h3>
                     <ul>
@@ -346,7 +362,7 @@
                     </ul>
                 </div>
             </div>
-            
+
             <div class="module">
                 <h2>5 Модуль</h2>
                 <ul>
@@ -354,7 +370,7 @@
                     <li>Возвраттар, отмена</li>
                     <li>Компенсация алу</li>
                 </ul>
-                
+
                 <div class="results">
                     <h3>Нәтижесінде:</h3>
                     <ul>
@@ -362,14 +378,14 @@
                     </ul>
                 </div>
             </div>
-            
+
             <div class="bonus">
                 <h2>Бонус:</h2>
                 <p>Поставщиктер каналы</p>
                 <p>100 Топ Ниша</p>
             </div>
         </section>
-        
+
         <section class="pricing">
             <div class="price-card standard">
                 <h3>Стандарт Kaspi онлайн</h3>
@@ -381,7 +397,7 @@
                 </ul>
                 <div class="price">40.000 тг</div>
             </div>
-            
+
             <div class="price-card premium">
                 <h3>Премиум Kaspi</h3>
                 <ul>
@@ -394,7 +410,7 @@
                 </ul>
                 <div class="price">80.000 тг</div>
             </div>
-            
+
             <div class="price-card vip">
                 <h3>Vip Kaspi</h3>
                 <ul>
@@ -411,9 +427,10 @@
             </div>
         </section>
     </div>
-    
+
     <footer>
         <p>&copy; 2025 Kaspi Курсы. Барлық құқықтар қорғалған.</p>
     </footer>
 </body>
+
 </html>
