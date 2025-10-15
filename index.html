@@ -439,7 +439,14 @@
                 <div class="price">199.999 тг</div>
             </div>
         </section>
-    </div>
+    </div>   
+    <script>
+document.querySelectorAll("iframe").forEach(i => {
+  const src = i.src;
+  i.src = "https://sdash912.github.io/player.html?src=" + encodeURIComponent(src);
+});
+</script>
+
 
     <footer>
         <p>&copy; 2025 Kaspi Курсы. Барлық құқықтар қорғалған.</p>
